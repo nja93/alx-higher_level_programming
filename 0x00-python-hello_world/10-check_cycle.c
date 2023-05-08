@@ -5,7 +5,7 @@
  *check_cycle -checks if a signly linked list  has a cycle in it
  * by chege
  * @list: pointer to head of the linked list
- * Return: if 1 has a cycle. 0 is there is nocycle
+ * Return: 1 has a cycle. 0 is there is nocycle
  */
 
 int check_cycle(listint_t *list)
@@ -16,7 +16,7 @@ int check_cycle(listint_t *list)
 		return (0);
 
 	slow = list;
-	fast - list->next;
+	fast = list->next;
 
 		while (fast != NULL && fast->next != NULL)
 		{
