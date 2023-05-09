@@ -1,7 +1,10 @@
 #!/usr/bin/python3
+def reremove_char_at(str, n):
+    copy = ""
 
-def remove_char_st(str, n):
-    if n < 0:
-        return (str)
-
-    return (str[:n] + str[n+1:])
+    x = 0
+    for c in str:
+        if i != n:
+            copy += c
+        i += 1
+    return copy
