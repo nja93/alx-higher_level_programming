@@ -3,6 +3,6 @@
 if __name__ == "__main__":
     import hidden_4
 
-    for name in sorted(dir(hidden_4)):
-        if name[:2] != "__":
-            print("{}".format(name))
+    for file_name in sorted(dir(hidden_4)):
+        if file_name[:2] != "__":
+            print("{}".format(file_name))
