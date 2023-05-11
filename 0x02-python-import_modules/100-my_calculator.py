@@ -8,7 +8,7 @@ if __name__ == "__main__":
         print("Usage: {} <a> <operator> <b>".format(argv[0]))
         exit(1)
     operators = {'+': add, "-": sub, '*': mul, '/': div}
-if argv[2] in ops:
+    if argv[2] in ops:
         number1 = int(argv[1])
         number2 = int(argv[3])
         ops = operators[argv[2]]
