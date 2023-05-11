@@ -1,4 +1,4 @@
-#!/usr/bi/python3
+#!/usr/bin/python3
 
 if __name__ == "__main__":
     import sys
@@ -7,12 +7,12 @@ if __name__ == "__main__":
     size = len(arg) - 1
 
     if size == 0:
-    print("{} arguments.".format(size))
+        print("{} arguments.".format(size))
 
     elif size > 1:
         print("{} arguments:".format(size))
-        for x in range(1, size + 1):
-            print("{}: {}".format(i, arg[i]))
+        for r in range(1, size + 1):
+            print("{}: {}".format(r, arg[r]))
 
     else:
         print("{} argument:".format(size))
