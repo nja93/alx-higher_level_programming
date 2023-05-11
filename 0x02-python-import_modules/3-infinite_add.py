@@ -1,17 +1,17 @@
 #!/usr/bin/python3
-def add-arg(argv):
-    n = len(argv) - 1
-    if n == 0:
-        print("{:d}". format(n))
+def add_arg(argv):
+    c = len(argv) - 1
+    if c == 0:
+        print("{:d}". format(c))
         return
     else:
-        i = 1
+        x = 1
         add = 0
-        while i <= n:
-            add = add + int(argv[i])
-            i += 1
+        while x <= c:
+            add = add + int(argv[x])
+            x += 1
             print("{:d}".format(add))
     
     if __name__ == "__main__":
-        inport sys
+        import sys
         add_arg(sys.argv)
