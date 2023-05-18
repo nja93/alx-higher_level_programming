@@ -8,6 +8,3 @@ print("Best score: {}".format(best_key))
 best_key = best_score(None)
 print("Best score: {}".format(best_key))
 
-guillaume@ubuntu:~/0x04$ ./10-main.py
-Best score: Molly
-Best score: None
