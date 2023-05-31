@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def list_division(my_list_1, my_list_2, list_length):
-    results[]
+    results = []
     for items in range(list_length):
         try:
             a = my_list_1[items]
