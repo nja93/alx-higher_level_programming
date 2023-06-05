@@ -7,14 +7,12 @@ class Rectangle:
     """Empty class Rectangle"""
     def __init__(self, width=0, height=0):
         """ Initialize a new rectangle."""
-
         self.height = height
         self.width = width
 
     @property
     def height(self):
-        """ Getter for height attribute """
-        
+        """ Getter for height attribute """      
         return (self.__height)
 
     @height.setter
