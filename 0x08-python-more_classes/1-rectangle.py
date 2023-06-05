@@ -2,6 +2,7 @@
 
 """ Define class Rectangle with width and height as attributes"""
 
+
 class Rectangle:
 
     """Rectangle Class"""
