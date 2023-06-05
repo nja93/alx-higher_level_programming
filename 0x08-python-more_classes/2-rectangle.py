@@ -4,14 +4,14 @@
 
 
 class Rectangle:
-    """rectangle class"""
+    """initalizedx rectangle class"""
     def __init__(self, width=0, height=0):
         self.height = height
         self.width = width
 
     @property
     def width(self):
-        """Retrieve attribute"""
+        """Retrieve width  attribute"""
         return self.__width
 
     @width.setter
@@ -26,7 +26,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """To retrieve attribute"""
+        """To retrieve height attribute"""
         return self.__height
 
     @height.setter
@@ -44,7 +44,7 @@ class Rectangle:
         return self.height * self.width
 
     def perimeter(self):
-        """Get perimeter of the rectangle"""
+        """retriebe perimeter of the rectangle"""
         if self.__height == 0 or self.__width == 0:
             return 0
         return 2 * (self.height + self.width)
