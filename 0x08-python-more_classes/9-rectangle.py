@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-"""Create a Rectangl Class"""
+"""Create a Rectangle class"""
 
 
 class Rectangle:
@@ -74,16 +74,16 @@ class Rectangle:
         print("Bye rectangle...")
 
     @staticmethod
-    def bigger_or_equal(rect1, rect2):
+    def bigger_or_equal(rect_1, rect_2):
         """returns the biggest rectangle based on the area"""
-        if type(rect1) is not Rectangle:
+        if type(rect_1) is not Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
-        if type(rect2) is not Rectangle:
+        if type(rect_2) is not Rectangle:
             raise TypeError("rect_2 must be an instance of Rectangle")
-        if rect1.area() >= rect2.area():
-            return rect1
+        if rect1.area() >= rect_2.area():
+            return rect_1
         else:
-            return rect2
+            return rect_2
 
     @classmethod
     def square(cls, size=0):
