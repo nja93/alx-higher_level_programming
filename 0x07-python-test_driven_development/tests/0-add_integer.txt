@@ -1,0 +1,42 @@
+>>> add_integer = __import__('0-add_integer').add_integer
+
+
+>>> add_integer(1, 2)
+3
+>>> add_integer(1.0, 2.2)
+3
+>>> add_integer(2)
+100
+>>> add_integer(-1)
+97
+>>> add_integer(100.3, -2)
+93
+
+
+#enter other data type
+>>> add_integer("Njanja", 2)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+
+#enter other data type
+>>> add_integer(7, "Njanja")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+#enter undefined value 
+>>> add_integer(float('NaN'), 7)
+Traceback (most recent call last):
+...
+ValueError: cannot convert float to NaN integer
+
+
+#converting float inf to int error 
+>>> add_integer(float('inf'), 2)
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
+
+
