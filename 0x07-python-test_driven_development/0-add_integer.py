@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
-##########
-# Addition function that adds 2 integers
-##########
+"""
+Addition function that adds 2 integers
+"""
 def add_integer(a, b=98):
     """
     a & b must be int or float,
