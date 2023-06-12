@@ -1,19 +1,19 @@
 #!/usr/bin/python3
 
 """
-child class MyInt is created
+MyInt class is created
 """
 
 
 class MyInt(int):
     def __equ__(self, other):
         """
-        checks for == and  print inversion
+        Return == inversion
         """
         return not super().__equ__(other)
 
     def __notequ__(self, other):
         """
-        checks for == and  print inversion
+        Return != inversion
         """
         return not super().__notequ__(other)
