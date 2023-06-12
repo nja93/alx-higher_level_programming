@@ -1,11 +1,14 @@
 #!/usr/bin/python3
 
 """
-MyInt class is created
+MyInt class is created methods to be inverted
 """
 
 
 class MyInt(int):
+    """
+    Checks for inversion
+    """
     def __equ__(self, other):
         """
         Return == inversion
