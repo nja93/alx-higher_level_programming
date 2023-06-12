@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 
-"""Defines a subclass Rectangle that inherits from Parent class BaseGeometry."""
+"""Defines a subclass Rectangle."""
+
+
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
@@ -11,8 +13,8 @@ class Rectangle(BaseGeometry):
         """Intialize a new Rectangle subclass.
 
         Args:
-            width type(int): width of the new Rectangle
-            height type(int): height of the new Rectangle
+            width (int): width of the new Rectangle
+            height(int): height of the new Rectangle
         """
         super().integer_validator("width", width)
         self.__width = width
@@ -25,6 +27,4 @@ class Rectangle(BaseGeometry):
 
     def __str__(self):
         """print the print() and str() representation of a Rectangle"""
-        string = "[" + str(self.__class__.__name__) + "] "
-        string += str(self.__width) + "/" + str(self.__height)
-        return string
+        return str("[Rectangle] {}/{}".format(self.__width, self.__height))
