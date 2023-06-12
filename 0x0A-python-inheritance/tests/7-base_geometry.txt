@@ -5,7 +5,7 @@ Import the class:
 Now test it:
 
     >>> BG = BaseGeometry()
-    
+
     >>> BG.integer_validator("my_int", 12)
 
     >>> BG.integer_validator("width", 89)
@@ -21,7 +21,7 @@ Now test it:
     >>> BG.integer_validator("age", 0)
     Traceback (most recent call last):
     ValueError: age must be greater than 0
-    
+
     >>> BG.integer_validator("distance", -7)
     Traceback (most recent call last):
     ValueError: distance must be greater than 0
