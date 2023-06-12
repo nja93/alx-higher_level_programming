@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
-"""importing Rectangle module"""
-
+"""
+create class Square, subclass of module
+"""
 
 Rectangle = __import__('9-rectangle').Rectangle
 
-"""Class square that is Rectangle's child"""
 
 class Square(Rectangle):
     """
