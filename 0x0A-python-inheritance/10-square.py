@@ -1,32 +1,32 @@
 #!/usr/bin/python3
 """
-Create class Square, child class of Rectangle
+Create a subclass Square, child class of Rectangle
 """
 Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
     """
-    Creates class Square
+    class Square Created
 
     Args:
-        def __init__(self, size) - Constructor
+        def __init__(self, size) - is the  Constructor
     """
     def __init__(self, size):
         """
-        Constructor
+        Constructor initialized
         """
         self.integer_validator("size", size)
         self.__size = size
 
     def area(self):
         """
-        computes area
+        calculate Area
         """
         return (self.__size * self.__size)
 
     def __str__(self):
         """
-        Print friendly format
+        Print in readable format
         """
         return "[Rectangle] {:d}/{:d}".format(self.__size, self.__size)
