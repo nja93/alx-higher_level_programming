@@ -2,8 +2,9 @@
 
 
 """
-Returns list of attributes  & methods
+Rturns list of attributes and methods
 """
+
 
 def lookup(obj):
     """
