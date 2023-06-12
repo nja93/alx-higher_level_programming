@@ -1,0 +1,66 @@
+Import the class:
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Now test it:
+
+    >>> BG = BaseGeometry()
+    
+    >>> BG.integer_validator("my_int", 12)
+
+    >>> BG.integer_validator("width", 89)
+
+    >>> BG.area()
+    Traceback (most recent call last):
+    Exception: area() is not implemented
+
+    >>> BG.integer_validator("name", "Lorna")
+    Traceback (most recent call last):
+    TypeError: name must be an integer
+
+    >>> BG.integer_validator("age", 0)
+    Traceback (most recent call last):
+    ValueError: age must be greater than 0
+    
+    >>> BG.integer_validator("distance", -7)
+    Traceback (most recent call last):
+    ValueError: distance must be greater than 0
+
+    >>> BG.integer_validator("average", 7.8)
+    Traceback (most recent call last):
+    TypeError: average must be an integer
+
+    >>> BG.integer_validator("average")
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+    >>> BG.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+    >>> BG.integer_validator("NaN", float('nan'))
+    Traceback (most recent call last):
+    TypeError: NaN must be an integer
+
+    >>> BG.integer_validator("Big", 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000)
+
+    >>> BG.integer_validator("age", (8,))
+    Traceback (most recent call last):
+    TypeError: date must be an integer
+
+    >>> BG.integer_validator("age”, [9])
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+    >>> BG.integer_validator("age", True)
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+    >>> BG.integer_validator("age, {4, 5})
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
+    >>> BG.integer_validator("age", None)
+    Traceback (most recent call last):
+    TypeError: age must be an integer
+
