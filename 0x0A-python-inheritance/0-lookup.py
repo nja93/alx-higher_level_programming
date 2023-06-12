@@ -1,13 +1,8 @@
 #!/usr/bin/python3
 
-
-"""
-Rturns list of attributes and methods
-"""
+"""Method object attribute lookup function."""
 
 
 def lookup(obj):
-    """
-    dir()fn that returns a sorted list id banesm including attributesm methods and other items
-    """
-    return dir(obj) 
+    """Return a list of an objects method and  attribute"""
+    return (dir(obj))
