@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-""" create Student  class"""
+"""create Student class"""
 
 
 class Student:
@@ -27,4 +27,3 @@ class Student:
         """replace all attributes of the Student instance"""
         for keys in json:
             setattr(self, keys, json[keys])
-
