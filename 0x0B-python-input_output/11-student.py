@@ -17,11 +17,11 @@ class Student:
             return self.__dict__
 
         else:
-            d = {}
+            dic = {}
             for attr in attrs:
                 if hasattr(self, attr):
-                    d[attr] = getattr(self, attr)
-            return d
+                    dic[attr] = getattr(self, attr)
+            return dic
 
     def reload_from_json(self, json):
         """replace all attributes of the Student instance"""
