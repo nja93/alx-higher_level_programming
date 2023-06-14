@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 """Write a class"""
+
     
 class Student:
     """Defines a class Student"""
@@ -19,4 +20,4 @@ class Student:
             for attribute in attrs:
                 if hasattr(self, attribute):
                     attribute_dict[attribute] = getattr(self, attribute)
-            return attribute_dict
+            return (attribute_dict)
