@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
-"""Write a class"""
-
+"""
+create class Student
+"""
 
 class Student:
     """
