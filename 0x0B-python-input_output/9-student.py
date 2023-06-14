@@ -5,8 +5,7 @@
 
 class Student:
     """
-    Defines a class Student
-   
+    Defines a class Student 
     args:
         def __init__ - constructor
         def to_json
