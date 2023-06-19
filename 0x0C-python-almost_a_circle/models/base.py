@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 
+import csv
 import json
 import os
 import turtle
-import csv
 
-"""Write the first class Base"""
+"""write the first class Base"""
 
 
 class Base:
@@ -29,7 +29,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
-        """it writes the JSON string representation of list_objs to a file"""
+        """it writes the JSON string rep of list_objs to a file"""
         if list_objs is None:
             list_objs = []
         filename = cls.__name__ + ".json"
@@ -40,7 +40,7 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """returns the list of the JSON string representation json_string"""
+        """it returns the list of the JSON string representation json_string"""
         if json_string is None or json_string == []:
             return []
         else:
@@ -48,7 +48,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
-        """returns an instance with all attributes already set"""
+        """it returns an instance with all attributes already set"""
         if cls.__name__ == "Rectangle":
             dummy = cls(1, 1)
         else:
@@ -68,19 +68,19 @@ class Base:
 
     @classmethod
     def save_to_file_csv(cls, list_objs):
-        """saves a list of objects to a CSV file"""
-        filename = cls.__name__ + ".csv"  # creates a filename for the CSV file
+        """to save a list of objects to a CSV file"""
+        filename = cls.__name__ + ".csv"  # create a CSV file with its filename
         with open(filename, "w", newline="") as file:
             if list_objs is None or list_objs == []:
-                file.write("[]")  # Return an empty list
+                file.write("[]")
             else:
                 if cls.__name__ == "Rectangle":
-                    # assign fieldnames depending on the object
+                    # assigns fieldnames depending on the object
                     fieldnames = ["id", "width", "height", "x", "y"]
                 else:
                     fieldnames = ["id", "size", "x", "y"]
 
-                # write dictionaries to the CSV file
+                #add dic to the CSV file
                 writer = csv.DictWriter(file, fieldnames=fieldnames)
                 for obj in list_objs:
                     # converts the object to a dictionary
@@ -88,14 +88,14 @@ class Base:
 
     @classmethod
     def load_from_file_csv(cls):
-        """reads data from a CSV file and
-        returns a list of instantiated classes
+        """read the data from a CSV file and
+        then returns a list of instantiated classes
         """
         filename = cls.__name__ + ".csv"
         try:
             with open(filename, "r", newline="") as file:
                 if cls.__name__ == "Rectangle":
-                    # Depending on the class name, different fieldnames
+                    #  different fieldnames, wil be used depending on classname
                     #  will be used for reading data from the CSV file
                     fieldnames = ["id", "width", "height", "x", "y"]
                 else:
