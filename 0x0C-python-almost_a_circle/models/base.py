@@ -22,7 +22,7 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """return json string rep of list_dictionaries"""
+        """converts list_dictionaries to JSON rep"""
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
         return json.dumps(list_dictionaries)
@@ -111,10 +111,8 @@ class Base:
 
     @staticmethod
     def draw(list_rectangles, list_squares):
-        """Draw Rectangles and Squares using the turtle module.
-        Args:
-            list_rectangles (list): A list of Rectangle objects to draw.
-            list_squares (list): A list of Square objects to draw.
+        """
+        draws all the rectangles and squares
         """
         turt = turtle.Turtle()
         turt.screen.bgcolor("#b7312c")
