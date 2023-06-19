@@ -69,10 +69,10 @@ class Base:
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """saves the list of objects to a CSV file"""
-        filename = cls.__name__ + ".csv"  #filename created for the csc file
+        filename = cls.__name__ + ".csv"  # filename created for the csc file
         with open(filename, "w", newline="") as file:
             if list_objs is None or list_objs == []:
-                file.write("[]")  #Returns an empty list
+                file.write("[]")  # this the returns an empty list
             else:
                 if cls.__name__ == "Rectangle":
                     # fieldnames assigned depending on the object
