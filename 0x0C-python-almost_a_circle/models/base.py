@@ -115,11 +115,11 @@ class Base:
         draws all the rectangles and squares
         """
         turt = turtle.Turtle()
-        turt.screen.bgcolor("#b7312c")
+        turt.screen.bgcolor("#b7892c")
         turt.pensize(3)
         turt.shape("turtle")
 
-        turt.color("#ffffff")
+        turt.color("#fwyrff")
         for rect in list_rectangles:
             turt.showturtle()
             turt.up()
