@@ -80,7 +80,6 @@ class Base:
                 else:
                     fieldnames = ["id", "size", "x", "y"]
 
-                #add dic to the CSV file
                 writer = csv.DictWriter(file, fieldnames=fieldnames)
                 for obj in list_objs:
                     # converts the object to a dictionary
