@@ -89,9 +89,30 @@ class Rectangle(Base):
         """
         String representation of rec`
         """
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y}\
-                                                - {self.__width}/{self.__height}"
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(
+            self.id, self.__x, self.__y, self.__width, self.__height)
 
+    def update(self, *args, **kwargs):
+        """"assign argument to each attribute"""
+
+        up = ["id", "width", "height", "x", "y"]
+        if (args):
+            for arg in range(len(args)):
+                setattr(self, up[arg], args[arg])
+
+        else:
+            for kwa in kwargs:
+                setattr(self, kwa, kwargs[kwa])
+
+    def to_dictionary(self):
+        """Returns the dict representation of a Rectangle"""
+        return {
+            "x": self.x,
+            "y": self.__y,
+            "id": self.id,
+            "height": self.__height,
+            'width': self.__width,
+        }
 
 
 
