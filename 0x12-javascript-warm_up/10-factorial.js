@@ -15,7 +15,7 @@ function calcFactorial (x) {
 }
 
 if (!isNaN(numb)) {
-  console.log(calcFactorial(num));
+  console.log(calcFactorial(numb));
 } else {
   console.log('1');
 }
