@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-import process = require('process');
+const process = require('process');
 
 const valueArgs = process.argv;
 if (valueArgs[2]) {
