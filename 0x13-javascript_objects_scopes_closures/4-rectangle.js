@@ -18,11 +18,11 @@ module.exports = class Rectangle {
     }
   }
 
-  rotate () {
+  rotate () { // switch width and height
     [this.height, this.width] = [this.width, this.height];
   }
 
-  double () {
+  double () { // doubles size of height and width
     this.width *= 2;
     this.height *= 2;
   }
