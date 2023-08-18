@@ -24,3 +24,4 @@ if __name__ == '__main__':
 
     for data in my_data:
         print(data)
+
