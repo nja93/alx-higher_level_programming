@@ -6,6 +6,8 @@ from sys import argv
 # checks if this is the script being run as main program
 if __name__ == "__main__":
     # est connection to mysql db using variables in the command line args
+
+    state_name = argv[4]
     conmysql = MySQLdb.connect(
         host='localhost',
         user=argv[1],
@@ -21,8 +23,9 @@ if __name__ == "__main__":
         """
         SELECT * FROM states  WHERE name = %s
         ORDER BY states.id ASC
-        """
+        """, (state_name,)
         )
+    # comaafter (state_name,) shows that you are passing a tuple of one arg
     # CODE ABOVE IS PROTECTED FROM INJECTION
     """ 'SELECT * FROM states WHERE name =
     {} ORDER BY id ASC".format(argv[4])'
