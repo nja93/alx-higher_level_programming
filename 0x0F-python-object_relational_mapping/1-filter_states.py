@@ -32,10 +32,9 @@ curobj.execute(query)
 
 states_list = curobj.fetchall()
 
-for state in state_list:
+for state in states_list:
     print(state)
 
 # closes curdoe and db connection & release resources
 curobj.close()
 conmysql.close()
-
