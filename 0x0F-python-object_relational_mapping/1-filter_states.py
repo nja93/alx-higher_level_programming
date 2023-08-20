@@ -1,38 +1,28 @@
 #!/usr/bin/python3
-
-"""
-Module that connects python script to a database
-"""
+"""import my sql module"""
+import MySQLdb
+# import argv(list to store sommand line args) from sys module
+from sys import argv
+# checks if this is the script being run as main program
 if __name__ == "__main__":
-    import MySQLdb
-    from sys import argv
-
-    # connect the db using command-line arguments
-    my_db = MySQLdb.connect(
-        host="localhost",
-        port=3306,
+    # est connection to mysql db using variables in the command line args
+    conmysql = MySQLdb.connect(
+        host='localhost',
         user=argv[1],
         password=argv[2],
-        db=argv[3]
+        db=argv[3],
+        port=3306
     )
+    # create a cursor obj used to execute SQL queries & fetch frm db
+    curobj = conmysql.cursor()
+    query = "SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY states.id ASC"
 
-    # create the cusror && execute the query
-    my_cursor = my_db.cursor()
-    my_cursor.execute(
-        """SELECT * FROM states WHERE name LIKE
-        BINARY 'N%'ORDER BY states.id ASC
-        """
-        )
-
-    # fetch the data queried
-    my_data = my_cursor.fetchall()
-
-    # iterate to print a tuple
-    for data in my_data:
-        print(data)
-
-    # Close all cursors
-    my_cursor.close()
-
-    # Close all databases
-    my_db.close()
+    # exucte method() executes the queru
+    curobj.execute(query)
+    # fetched all rows returned by query & store in states_list
+    states_list = curobj.fetchall()
+    for state in states_list:
+        print(state)
+    # closes curdoe and db connection & release resources
+    curobj.close()
+    conmysql.close()  
