@@ -15,14 +15,16 @@ if __name__ == "__main__":
     )
     # create a cursor obj used to execute SQL queries & fetch frm db
     curobj = conmysql.cursor()
-    query = "SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY states.id ASC"
-
-    # exucte method() executes the queru
-    curobj.execute(query)
+    # execute method() executes the queru
+    curobj.execute(
+            """SELECT * FROM states WHERE name LIKE
+            BINARY 'N%' ORDER BY states.id ASC
+            """
+            )
     # fetched all rows returned by query & store in states_list
     states_list = curobj.fetchall()
     for state in states_list:
         print(state)
-    # closes curdoe and db connection & release resources
+    # closes cursor and db connection & release resources
     curobj.close()
-    conmysql.close()  
+    conmysql.close()
