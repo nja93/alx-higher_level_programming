@@ -1,4 +1,5 @@
-#!/bin/user/python3
+#!/usr/bin/python3
+
 
 # import my sql module
 import MySQLdb
@@ -20,7 +21,7 @@ if __name__ == "__main__":
     )
 
 # create a cursor obj used to execute SQL queries & fetch frm db
-curobj = conn.cursor()
+curobj = conmysql.cursor()
 
 query = "SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY id ASC"
 
@@ -37,3 +38,4 @@ for state in state_list:
 # closes curdoe and db connection & release resources
 curobj.close()
 conmysql.close()
+
