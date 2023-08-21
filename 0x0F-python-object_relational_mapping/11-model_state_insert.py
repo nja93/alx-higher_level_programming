@@ -1,10 +1,6 @@
 #!/usr/bin/python3
 
 """
-This  script that adds the State object “Louisiana” to 
-the database
-"""
-"""
 Module that connects python script to a database
 """
 from sys import argv
@@ -12,6 +8,10 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
+"""
+This  script that adds the State object “Louisiana” to 
+the database
+"""
 if __name__ == "__main__":
 
     engine = create_engine(
