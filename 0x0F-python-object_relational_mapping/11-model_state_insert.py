@@ -9,7 +9,7 @@ from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
 """
-This  script that adds the State object “Louisiana” to 
+This  script that adds the State object “Louisiana” to
 the database
 """
 if __name__ == "__main__":
