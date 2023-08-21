@@ -18,3 +18,5 @@ if __name__ == "__main__":
 
     for instance in session.query(State).order_by(State.id):
         print("{}:{}".format(instance.id, instance.name))
+
+    session.close()
