@@ -1,13 +1,14 @@
 #!/usr/bin/python3
-"""This script script that prints the State object with the
-name passed as argument from the database hbtn_0e_6_usa
-"""
 
 ''' Module that connects python script to a database'''
 from sys import argv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
+
+"""This script script that prints the State object with the
+name passed as argument from the database hbtn_0e_6_usa
+"""
 
 if __name__ == "__main__":
 
