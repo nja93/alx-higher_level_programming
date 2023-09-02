@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""using urllib to send requests"""
+""" script using urllib to send requests"""
 
 import sys
 from urllib import request
