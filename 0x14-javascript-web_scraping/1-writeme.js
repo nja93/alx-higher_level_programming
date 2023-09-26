@@ -8,7 +8,7 @@ const filePath = process.argv[2];
 const newstring = process.argv[3];
 
 fs.writeFile(filePath, newstring, 'utf-8', (error) => {
-  if (error){
-   console.error(error)
+  if (error) {
+    console.error(error);
   }
-  });
+});
